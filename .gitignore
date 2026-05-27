@@ -104,3 +104,13 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Alt klasörlerdeki geçici Unity dosyaları için
+Library/
+Temp/
+Obj/
+Builds/
+Logs/
+MemoryCaptures/
+UserSettings/
+.vs/
