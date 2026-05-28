@@ -16,10 +16,10 @@ EditorBuildSettings:
     guid: 4d20a2abf8ef31e45aa8ae38ddda46c4
   - enabled: 1
     path: Assets/parsomen2.unity
-    guid: 2cb4322a198d15e40906510ae10c237a
+    guid: 084c501b213a0824995e46586084ed21
   - enabled: 1
     path: Assets/parsomen3.unity
-    guid: 14fbe49f2432ef142a000d620d4d56a5
+    guid: c7b7eb5f0303751428f80bcc6240d119
   - enabled: 1
     path: Assets/KagitParcasi.unity
     guid: 7964250cc73fb104f9c5aa6d493aab53
