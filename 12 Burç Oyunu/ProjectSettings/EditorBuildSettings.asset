@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/OyunSahnesi.unity
     guid: 3b0f2406cec809e468df3d6ffbf0f5bf
+  - enabled: 1
+    path: Assets/outro1.unity
+    guid: d73f8db414120d4408dc7873f690b45a
+  - enabled: 1
+    path: Assets/outro2.unity
+    guid: 82edb9a87eed47a4bb522d16664c782f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
