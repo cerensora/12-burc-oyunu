@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/VideoSahnesi.unity
-    guid: 4d26e1988d827674283f15946c9a2142
+    path: Assets/VideoSahnesi 1.unity
+    guid: 9d13a53372610a949a44a586cc431906
   - enabled: 1
     path: Assets/parsomen1.unity
     guid: 4d20a2abf8ef31e45aa8ae38ddda46c4
@@ -21,11 +21,17 @@ EditorBuildSettings:
     path: Assets/parsomen3.unity
     guid: c7b7eb5f0303751428f80bcc6240d119
   - enabled: 1
-    path: Assets/KagitParcasi.unity
+    path: Assets/KagitParcasi1.unity
     guid: 7964250cc73fb104f9c5aa6d493aab53
+  - enabled: 1
+    path: Assets/KagitParcasi2.unity
+    guid: fb60b1a8b86a2e740b149625ca046831
   - enabled: 1
     path: Assets/OyunSahnesi.unity
     guid: 3b0f2406cec809e468df3d6ffbf0f5bf
+  - enabled: 1
+    path: Assets/VideoSahnesi2.unity
+    guid: 4d26e1988d827674283f15946c9a2142
   - enabled: 1
     path: Assets/outro1.unity
     guid: d73f8db414120d4408dc7873f690b45a
