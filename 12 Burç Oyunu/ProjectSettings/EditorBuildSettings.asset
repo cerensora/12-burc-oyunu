@@ -22,22 +22,22 @@ EditorBuildSettings:
     guid: c7b7eb5f0303751428f80bcc6240d119
   - enabled: 1
     path: Assets/KagitParcasi1.unity
-    guid: 7964250cc73fb104f9c5aa6d493aab53
+    guid: 5dbb6308d5f2d864db4979eaee5c76f7
   - enabled: 1
     path: Assets/KagitParcasi2.unity
-    guid: fb60b1a8b86a2e740b149625ca046831
+    guid: 22f48c9ccfa197042bb9aafebf379632
   - enabled: 1
     path: Assets/OyunSahnesi.unity
     guid: 3b0f2406cec809e468df3d6ffbf0f5bf
-  - enabled: 1
-    path: Assets/VideoSahnesi2.unity
-    guid: 4d26e1988d827674283f15946c9a2142
   - enabled: 1
     path: Assets/outro1.unity
     guid: d73f8db414120d4408dc7873f690b45a
   - enabled: 1
     path: Assets/outro2.unity
     guid: 82edb9a87eed47a4bb522d16664c782f
+  - enabled: 1
+    path: Assets/VideoSahnesi 2.unity
+    guid: 5038c31cad03d2447bbda1fff9360d82
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
