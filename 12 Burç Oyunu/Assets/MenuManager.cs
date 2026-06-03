@@ -28,4 +28,9 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Oyundan çýkýþ yapýldý!");
         Application.Quit();
     }
+    // Bu fonksiyon sayesinde sahne numarasýný Unity'nin içinden biz girebileceðiz!
+    public void IstediginSahneyeGec(int sahneNumarasi)
+    {
+        SceneManager.LoadScene(sahneNumarasi);
+    }
 }

@@ -590,8 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c8cb1234fad7e48be8e246e768d28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 1925258459}
-  sonrakiSahneAdi: parsomen1
+  gidilecekSahneNumarasi: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

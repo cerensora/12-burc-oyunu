@@ -1,27 +1,26 @@
 using UnityEngine;
-using UnityEngine.Video;
-using UnityEngine.SceneManagement; // Sahne geçiþleri için gerekli kütüphane
+using UnityEngine.Video; // Video kodlarýný kullanabilmek için
+using UnityEngine.SceneManagement; // Sahne geçiþleri için
 
 public class VideoGecis : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    public string sonrakiSahneAdi; // Inspector'dan yazacaðýmýz sahne adý
+    [Header("Gidilecek Sahne")]
+    public int gidilecekSahneNumarasi; // Hangi sahneye gidileceðini Unity'den gireceðiz
+
+    private VideoPlayer videoPlayer;
 
     void Start()
     {
-        // Eðer videoPlayer atanmamýþsa, bu objedekini otomatik bul
-        if (videoPlayer == null)
-        {
-            videoPlayer = GetComponent<VideoPlayer>();
-        }
+        // Objenin üzerindeki Video Player'ý bul
+        videoPlayer = GetComponent<VideoPlayer>();
 
-        // Video bittiðinde çalýþacak olayý (event) tanýmlýyoruz
-        videoPlayer.loopPointReached += SahneyiDegistir;
+        // "loopPointReached" komutu, video sonuna geldiðinde ne olacaðýný belirler
+        videoPlayer.loopPointReached += VideoBitti;
     }
 
-    void SahneyiDegistir(VideoPlayer vp)
+    void VideoBitti(VideoPlayer vp)
     {
-        // Video bittiðinde sonraki sahneyi yükler
-        SceneManager.LoadScene(sonrakiSahneAdi);
+        // Video bittiðinde belirlediðimiz sahneye geç!
+        SceneManager.LoadScene(gidilecekSahneNumarasi);
     }
 }
