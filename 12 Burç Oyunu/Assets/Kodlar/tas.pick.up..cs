@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Sahne geçiþleri için bu kütüphaneyi ekliyoruz
 
 public class TasPickUp : MonoBehaviour
 {
@@ -6,35 +7,49 @@ public class TasPickUp : MonoBehaviour
     public ZamanKontrol zamanKontrolScripti;
 
     [Header("Ses Ayarlarý")]
-    public AudioClip tasToplamaSesi; // Inspector'dan atayacaðýmýz ses dosyasý
-    private AudioSource sesKaynagi;  // Karakterin üzerindeki hoparlör
+    public AudioClip tasToplamaSesi;
+    private AudioSource sesKaynagi;
+
+    [Header("Bölüm Geçiþ Ayarlarý")]
+    public int toplanmasiGerekenTas = 6; // Boss savaþý veya diðer sahne için gereken toplam taþ sayýsý
+    private int toplananTas = 0; // Þu ana kadar toplanan taþlarý tutacak sayaç
 
     private void Start()
     {
-        // Oyun baþladýðýnda karakterin üzerindeki AudioSource'u otomatik bulur
         sesKaynagi = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Karakterin çarptýðý nesnenin etiketi "Tas" ise
         if (collision.gameObject.CompareTag("Tas"))
         {
-            // Eðer ses dosyasý ve hoparlör eklendiyse sesi çal
             if (tasToplamaSesi != null && sesKaynagi != null)
             {
-                // PlayOneShot kullanýyoruz ki karakter hýzlýca iki taþ alýrsa sesler kesilmeden üst üste çalabilesin
                 sesKaynagi.PlayOneShot(tasToplamaSesi);
             }
 
-            // Taþý sahneden yok et
             Destroy(collision.gameObject);
 
-            // Süreyi kýsalt ve sayacý sýfýrla
+            // Her taþ toplandýðýnda sayacý 1 artýr
+            toplananTas++;
+
             if (zamanKontrolScripti != null)
             {
                 zamanKontrolScripti.YeniTasaGec();
             }
+
+            // Eðer toplanan taþ sayýsý hedef sayýya ulaþtýysa sonraki sahneye geç
+            if (toplananTas >= toplanmasiGerekenTas)
+            {
+                SonrakiSahneyeGec();
+            }
         }
+    }
+
+    private void SonrakiSahneyeGec()
+    {
+        // Mevcut sahnenin build indeksini al ve bir sonrakini yükle
+        int mevcutSahneIndeksi = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(mevcutSahneIndeksi + 1);
     }
 }
