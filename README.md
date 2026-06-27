@@ -1,1 +1,1 @@
-# 12-burc-oyunu
+# dogaltas-oyunu
